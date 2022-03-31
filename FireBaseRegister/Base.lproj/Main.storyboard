@@ -123,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="69.642857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="jR5-4s-2dg">
             <objects>
-                <viewController id="Iyh-eH-OQ3" sceneMemberID="viewController">
+                <viewController id="Iyh-eH-OQ3" customClass="LogInViewController" customModule="FireBaseRegister" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="80I-4L-8JQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

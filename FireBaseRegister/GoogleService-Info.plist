@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>491632835672-eefn5m6tpuh49r2mrbc2bogk6iqqm0b7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.491632835672-eefn5m6tpuh49r2mrbc2bogk6iqqm0b7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDaN9AwtzXUUsTBBRmBgusqYf9GZXH9IdY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>491632835672</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>NatiaLobzhanidze.FireBaseRegister</string>
+	<key>PROJECT_ID</key>
+	<string>get-started-93acf</string>
+	<key>STORAGE_BUCKET</key>
+	<string>get-started-93acf.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:491632835672:ios:f4a329098aa524b7d79e2d</string>
+</dict>
+</plist>
