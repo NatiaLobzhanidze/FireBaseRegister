@@ -223,6 +223,33 @@
             </objects>
             <point key="canvasLocation" x="1651" y="-40"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="4QT-o0-yoj">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="QeM-4m-Vzb" customClass="HomeViewController" customModule="FireBaseRegister" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qj4-Ss-P5S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ay-os-A21">
+                                <rect key="frame" x="160.5" y="437.5" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="31f-gc-Cpn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Ay-os-A21" firstAttribute="centerX" secondItem="Qj4-Ss-P5S" secondAttribute="centerX" id="9OY-CV-cbi"/>
+                            <constraint firstItem="7Ay-os-A21" firstAttribute="centerY" secondItem="Qj4-Ss-P5S" secondAttribute="centerY" id="Rc0-8o-RYb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVk-hA-dn7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2421.739130434783" y="140.625"/>
+        </scene>
         <!--Log In View Controller-->
         <scene sceneID="p7y-qW-RgU">
             <objects>

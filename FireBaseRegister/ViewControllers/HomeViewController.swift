@@ -9,21 +9,24 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    let identifier = "HomeViewController"
+    
+//    var textLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .yellow
+//
+//        textLabel!.text = "Hello World"
+//        textLabel!.translatesAutoresizingMaskIntoConstraints = false
+//        view.addSubview(textLabel)
+//        setConstraints()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    func setConstraints(){
+//        
+//        NSLayoutConstraint.activate([textLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//                                     textLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)])
+//    }
 
 }

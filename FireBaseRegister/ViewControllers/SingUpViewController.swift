@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class SingUpViewController: UIViewController {
     
@@ -22,26 +23,69 @@ class SingUpViewController: UIViewController {
 
     }
     
-    @IBAction func createAccount(_ sender: Any) {
-        
-        let signUpManager = FireBaseAuthManager()
-        if let email = userEmail.text, let password = userPassword.text {
-            signUpManager.createUser(email: email, password: password){[weak self] (success) in
-                guard let `self` = self else { return }
-                var message: String = ""
-                
-                if success {
-                    message = "User was sucessfully created"
-                } else {
-                    message = "There was an error"
-                }
-                let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(alertController, animated: true)
-              
-            }
+    func validateFields() -> String? {
+        if userName.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            userEmail.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            userPassword.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+          
+                return "Please fill in all line "
+           
         }
+        
+         
+        if userPassword.text != repeatPassword.text {
+            
+            return "passwords do not match"
+        }
+        
+        return nil
     }
     
+    @IBAction func createAccount(_ sender: Any) {
+        let error = validateFields()
+        if error != nil {
+            showEror(error!)
+        } else {
+            let usersName = userName.text!.trimmingCharacters(in: .whitespacesAndNewlines )
+            let mail = userEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = userPassword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            //
+            
+            Auth.auth().createUser(withEmail: mail, password: password){(result, err) in
+                if err != nil {
+                    print(err)
+                    self.showEror("Error creating user")
+                
+                }else {
+                    let db = Firestore.firestore()
+                    db.collection("users").addDocument(data: [
+                        "userName": usersName,
+                       
+                        "uid": result!.user.uid
+                    ]) { error in
+                        if error != nil {
+                            self.showEror("error saving user data")
+                        }
+                    }
+                    self.goToHomePage()
+                }
+            }
+        }
+       
+              
+    }
+        
+    func showEror(_ message: String){
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alertController, animated: true)
+    }
+    
+    
+    func goToHomePage(){
+        dismiss(animated: true, completion: nil)
+        let ac = HomeViewController()
+        self.present(ac, animated: true, completion: nil)
+    }
 
 }
